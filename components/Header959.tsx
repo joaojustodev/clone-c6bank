@@ -10,13 +10,12 @@ const Header = () => {
             <div className="w-full pb-[75%]"></div>
             <picture>
               <Image
-                src="/static/hero-bg-xs.jpg"
+                src="/static/hero-bg-xs.webp"
                 alt="Mulher negra"
                 layout="fill"
                 objectFit="cover"
-                objectPosition="left"
                 loading="lazy"
-                className="absolute left-0 top-0 "
+                className="absolute left-0 top-0"
               />
             </picture>
           </div>
@@ -37,7 +36,7 @@ const Header = () => {
           </a>
         </div>
 
-        <h1 className="text-[1.9rem] font-bold leading-[1.25] sm:text-center">
+        <h1 className="text-3xl font-bold leading-[1.25] sm:text-center">
           O banco da vida de 16 milhões de pessoas
         </h1>
         <p className="text-lg w-full sm:text-center">
