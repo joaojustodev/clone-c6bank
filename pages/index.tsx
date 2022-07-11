@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import Header959 from "../components/Header959";
+import Header959 from "../components/Home/Header959";
 
 import Nav from "../components/Nav";
-import Products from "../components/Products";
+import Products from "../components/Home/Products";
 
 const Home: NextPage = () => {
   return (

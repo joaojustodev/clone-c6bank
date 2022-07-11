@@ -95,11 +95,10 @@ const ProductsForYou = () => {
             <div className="aboslute top-0 m-auto h-full">
               <video
                 preload="auto"
-                autoPlay={true}
-                loop
+                autoPlay
                 playsInline
-                webkit-playsinline
-                x5-playsinline
+                webkit-playsinline={1}
+                x5-playsinline={1}
                 style={{ width: "100%", height: "100%" }}
               >
                 <source
