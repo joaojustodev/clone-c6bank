@@ -5,7 +5,7 @@ function Logo() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="#000"
-      className="jss6 jss12"
+      className="md:w-[120px] w-[80px]"
       viewBox="0 0 120 24"
     >
       <path
