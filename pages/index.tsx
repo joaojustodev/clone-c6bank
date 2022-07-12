@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 import Header from "../components/Home/Header";
 import Header959 from "../components/Home/Header959";
+import MobileMenu from "../components/MobileMenu";
 import Footer from "../components/Footer";
 
 import Nav from "../components/Nav";
@@ -30,6 +31,7 @@ const Home: NextPage = () => {
       <main>
         <div>
           <Nav />
+          <MobileMenu />
           <Header />
           <Header959 />
         </div>
