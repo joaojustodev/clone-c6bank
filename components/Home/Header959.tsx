@@ -1,32 +1,27 @@
 import Image from "next/image";
 import Button from "../Button";
 
-const Header = () => {
+const Header959 = () => {
   return (
-    <header className="md:hidden flex flex-col">
-      <div className="overflow-hidden">
-        <div className="relative z-[150] w-[150%] right-5  top-[-1%] sm:w-full sm:right-0 sm:top0">
-          <div>
-            <div className="w-full pb-[75%]"></div>
-            <picture>
-              <Image
-                src="/static/hero-bg-xs.webp"
-                alt="Mulher negra"
-                layout="fill"
-                objectFit="cover"
-                loading="lazy"
-                className="absolute left-0 top-0"
-              />
-            </picture>
-          </div>
-        </div>
+    <header className="hidden relative overflow-hidden pb-16 pt-24 md:flex flex-col justify-end">
+      <div className="absolute top-0 left-0 right-0 bottom-0 -z-20">
+        <picture>
+          <Image
+            src="/static/hero-bg.webp"
+            alt="Mulher negra"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="top"
+            loading="lazy"
+          />
+        </picture>
       </div>
-      <div className="flex flex-col gap-4 py-8 px-6">
-        <div className="flex flex-col bg-gray-100 rounded sm:rounded-3xl sm:mx-auto">
-          <a href="#" className="flex gap-2 px-2 py-3 sm:pl-3 sm:pr-6">
-            <hr className="h-[inherit] w-1 rounded bg-blue-500 sm:hidden"></hr>
-            <div className="sm:flex sm:items-center sm:gap-2">
-              <span className="block text-xs text-white sm:bg-blue-500 sm:font-bold sm:rounded sm:px-2 sm:py-[1px]">
+
+      <div className="flex flex-col gap-4 px-12 container-lg">
+        <div className="bg-gray-100 w-[436px] rounded-3xl">
+          <a href="#" className="flex  gap-2 py-2 pl-3 pr-6">
+            <div className="flex items-center gap-2">
+              <span className="block text-xs text-white font-bold  bg-blue-500 rounded-3xl px-2 py-1">
                 C6 EXPERIENCE
               </span>
               <span className="block text-sm text-white">
@@ -36,24 +31,33 @@ const Header = () => {
           </a>
         </div>
 
-        <h1 className="text-3xl font-bold leading-[1.25] sm:text-center">
-          O banco da vida de 16 milhões de pessoas
-        </h1>
-        <p className="text-lg w-full sm:text-center">
-          Conta digital, cartão de crédito, investimentos e mais: tudo em um só
-          app.
-        </p>
-        <div>
-          <Button
-            href="#"
-            css="w-full sm:w-[370px] h-[40px] items-center justify-center text-sm sm:mx-auto"
+        <div className="container-lg">
+          <h1
+            className="pb-8 font-extralight leading-tight"
+            style={{
+              fontSize:
+                "calc(36px + (72 - 36) * ((100vw - 600px) / (1920 - 600)))",
+            }}
           >
-            <span>NOSSOS PRODUTOS</span>
-          </Button>
+            O banco da vida de{" "}
+            <span className="block">16 milhões de pessoas</span>
+          </h1>
+          <p className="text-2xl font-normal pb-8 opacity-70 w-full max-w-[45%]">
+            Conta digital, cartão de crédito, investimentos e mais: tudo em um
+            só app.
+          </p>
+          <div>
+            <Button
+              href="#"
+              css="sm:w-[340px] h-[42px] items-center justify-center text-sm font-semibold"
+            >
+              <span>NOSSOS PRODUTOS</span>
+            </Button>
+          </div>
         </div>
       </div>
     </header>
   );
 };
 
-export default Header;
+export default Header959;
