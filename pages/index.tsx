@@ -1,10 +1,23 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import { motion, Variants } from "framer-motion";
+import Header from "../components/Home/Header";
 import Header959 from "../components/Home/Header959";
+import Footer from "../components/Footer";
 
 import Nav from "../components/Nav";
 import Products from "../components/Home/Products";
+import { ArrowUpRight } from "phosphor-react";
+
+const undelineHoverVariant: Variants = {
+  hover: {
+    width: "25%",
+    transition: {
+      ease: "linear",
+    },
+  },
+};
 
 const Home: NextPage = () => {
   return (
@@ -14,19 +27,22 @@ const Home: NextPage = () => {
         <meta name="description" content="Clone do site C6 Bank" />
         <link rel="icon" href="https://www.c6bank.com.br/favicon.ico" />
       </Head>
-      <main className="flex flex-col gap-8 min-h-[150vh]">
-        <div className="flex flex-1 flex-col">
+      <main>
+        <div>
           <Nav />
+          <Header />
           <Header959 />
         </div>
         <Products />
-        <section className="px-4 mx-auto max-w-[1121px]">
-          <div className="block">
-            <h2 className="text-[28px] mb-10">
-              <strong>Sem tarifas:</strong>
-              <span>economize seu dinheiro</span>
+        <section className="py-12 md:py-20 md:px-12">
+          <div className="max-w-containerMd mx-auto px-6">
+            <h2 className="text-[28px] md:text-[40px] mb-20 font-bold">
+              Sem tarifas:{" "}
+              <span className="font-normal md:block">
+                economize seu dinheiro
+              </span>
             </h2>
-            <ul className="flex gap-12 flex-col sm:gap-0 sm:grid sm:grid-cols-2 md:grid-cols-3">
+            <ul className="flex gap-12 sm:-mx-6 md:-mx-12 flex-col sm:gap-0 sm:grid sm:grid-cols-2 md:grid-cols-3">
               <li className=" sm:px-6 sm:mb-20 md:px-12">
                 <div className="flex flex-col gap-4">
                   <span>
@@ -183,6 +199,138 @@ const Home: NextPage = () => {
             </ul>
           </div>
         </section>
+
+        <section className="py-12 md:py-20 md:px-12 bg-gray-50">
+          <div className="max-w-containerLg mx-auto px-6">
+            <h2 className="text-[28px] md:text-[40px] md:w-[70%] font-bold mb-20">
+              Blog do C6 Bank:{" "}
+              <span className="font-normal">
+                novidades, produtos e educação financeira em um só canal
+              </span>
+            </h2>
+
+            <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+              {/* FIRST ANCHOR  */}
+              <div className="sm:max-w-[400px] w-full bg-white border-b-2 border-yellow-500 group">
+                <motion.a whileHover="hover" href="#">
+                  <div className="relative overflow-hidden max-h-[210px]">
+                    <div className="relative overflow-hidden">
+                      <div className="w-full pb-[49%]"></div>
+                      <Image
+                        src="/static/1.webp"
+                        alt=""
+                        layout="fill"
+                        objectFit="cover"
+                        objectPosition="center"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col pt-4 px-4 mb-4">
+                    <span className="text-xs uppercase font-thin  before:inline-block before:content-[''] before:w-[1.5px] before:h-[7px] before:mr-3 before:bg-yellow-500">
+                      Novidades
+                    </span>
+                    <p className="text-lg font-bold mt-2 mb-4">
+                      C6 Experience: Complete desafios, suba de nível e garanta
+                      recompensas exclusivas
+                    </p>
+                    <div className="relative">
+                      <span className="flex items-center gap-2 text-xs uppercase">
+                        SAIBA MAIS
+                        <ArrowUpRight className="hidden group-hover:block" />
+                      </span>
+                      <motion.div
+                        variants={undelineHoverVariant}
+                        className="absolute -bottom-[2px] bg-black w-[4%] h-[1.5px]"
+                      />
+                    </div>
+                  </div>
+                </motion.a>
+              </div>
+
+              {/* SECOND ANCHOR  */}
+              <div className="sm:max-w-[400px] w-full bg-white border-b-2 border-yellow-500">
+                <motion.a whileHover="hover" href="#" className="group">
+                  <div className="relative overflow-hidden max-h-[210px]">
+                    <div className="relative overflow-hidden">
+                      <div className="w-full pb-[49%]"></div>
+                      <Image
+                        src="/static/2.webp"
+                        alt=""
+                        layout="fill"
+                        objectFit="cover"
+                        objectPosition="center"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col pt-4 px-4">
+                    <span className="text-xs uppercase font-thin  before:inline-block before:content-[''] before:w-[1.5px] before:h-[7px] before:mr-3 before:bg-yellow-500">
+                      Economia
+                    </span>
+                    <p className="text-lg font-bold mt-2 mb-4">
+                      C6 Experience: Complete desafios, suba de nível e garanta
+                      recompensas exclusivas
+                    </p>
+                    <div className="relative">
+                      <span className="flex items-center gap-2 text-xs uppercase">
+                        SAIBA MAIS
+                        <ArrowUpRight className="hidden group-hover:block" />
+                      </span>
+                      <motion.div
+                        variants={undelineHoverVariant}
+                        className="absolute -bottom-[2px] bg-black w-[4%] h-[1.5px]"
+                      />
+                    </div>
+                  </div>
+                </motion.a>
+              </div>
+
+              {/* THIRD ANCHOR  */}
+              <div className="sm:max-w-[400px] w-full bg-white border-b-2 border-yellow-500">
+                <motion.a whileHover="hover" href="#" className="group">
+                  <div className="relative overflow-hidden max-h-[210px]">
+                    <div className="relative overflow-hidden">
+                      <div className="w-full pb-[49%]"></div>
+                      <picture>
+                        <Image
+                          src="/static/3.webp"
+                          alt=""
+                          layout="fill"
+                          objectFit="cover"
+                          objectPosition="center"
+                          className="w-full h-full"
+                        />
+                      </picture>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col pt-4 px-4">
+                    <span className="text-xs uppercase font-thin  before:inline-block before:content-[''] before:w-[1.5px] before:h-[7px] before:mr-3 before:bg-yellow-500">
+                      Produtos
+                    </span>
+                    <p className="text-lg font-bold mt-2 mb-4">
+                      C6 Experience: Complete desafios, suba de nível e garanta
+                      recompensas exclusivas
+                    </p>
+                    <div className="relative">
+                      <span className="flex items-center gap-2 text-xs uppercase">
+                        SAIBA MAIS
+                        <ArrowUpRight className="hidden group-hover:block" />
+                      </span>
+                      <motion.div
+                        variants={undelineHoverVariant}
+                        className="absolute -bottom-[2px] bg-black w-[4%] h-[1.5px]"
+                      />
+                    </div>
+                  </div>
+                </motion.a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <Footer />
       </main>
     </div>
   );
