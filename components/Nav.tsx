@@ -1,6 +1,6 @@
 import { memo, useContext, useState } from "react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Logo from "./Logo";
 import Button from "./Button";
 import { MobileMenuContext } from "../context/MobileMenuContext";
@@ -10,28 +10,19 @@ import useEventListener from "../hooks/useEventListener";
 const Nav = () => {
   const [scrollY, setScrollY] = useState(0);
   const [overlay, setOverlay] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState("");
   const { mobileMenuVisible, openMenuMobile, closeMenuMobile } =
     useContext(MobileMenuContext);
   useEventListener("scroll", () => setScrollY(window.scrollY));
 
-  const subMenuAnimate = {
-    visible: {
-      opacity: 1,
-      rotateX: 0,
-      transition: {
-        duration: 0.3,
-      },
-      display: "block",
-    },
+  const subMenuAnimate: Variants = {
     hidden: {
       opacity: 0,
-      rotateX: -15,
+    },
+    visible: {
+      opacity: 1,
       transition: {
-        duration: 0.3,
-      },
-      transitionEnd: {
-        display: "none",
+        type: "spring",
+        duration: 0.5,
       },
     },
   };
@@ -49,13 +40,18 @@ const Nav = () => {
           <div className="flex items-center justify-between h-full px-6">
             <div className="flex gap-6 h-full">
               <Logo />
-              <NavigationMenu.Root className="h-full lg:flex items-center list-none hidden">
+              <NavigationMenu.Root className="h-full xl:flex items-center list-none hidden">
                 <NavigationMenu.Item className="pr-6">
                   <NavigationMenu.NavigationMenuTrigger className="text-base text-[#242424] font-bold">
                     Pessoas Físicas
                   </NavigationMenu.NavigationMenuTrigger>
                   <NavigationMenu.Content>
-                    <div className="w-[750px] h-[250px] bg-white rounded shadow-3xl absolute z-[210] left-[calc(750px / 1/4)] -bottom-[250px]"></div>
+                    <motion.div
+                      variants={subMenuAnimate}
+                      initial="hidden"
+                      animate="visible"
+                      className="w-[750px] h-[250px] bg-white rounded shadow-3xl absolute z-[210] left-[calc(750px / 1/4)] -bottom-[250px]"
+                    ></motion.div>
                   </NavigationMenu.Content>
                 </NavigationMenu.Item>
 
@@ -64,7 +60,12 @@ const Nav = () => {
                     Pessoas Jurídicas
                   </NavigationMenu.NavigationMenuTrigger>
                   <NavigationMenu.Content>
-                    <div className="w-[550px] h-[250px] bg-white rounded shadow-3xl absolute z-[210] left-[calc(550px / 1/4)] -bottom-[250px]"></div>
+                    <motion.div
+                      variants={subMenuAnimate}
+                      initial="hidden"
+                      animate="visible"
+                      className="w-[550px] h-[250px] bg-white rounded shadow-3xl absolute z-[210] left-[calc(550px / 1/4)] -bottom-[250px]"
+                    ></motion.div>
                   </NavigationMenu.Content>
                 </NavigationMenu.Item>
 
@@ -73,20 +74,35 @@ const Nav = () => {
                     C6 MEI
                   </NavigationMenu.NavigationMenuTrigger>
                   <NavigationMenu.Content>
-                    <div className="w-[450px] h-[250px] bg-white rounded shadow-3xl absolute z-[210] left-[calc(450px / 1/4)] -bottom-[250px]"></div>
+                    <motion.div
+                      variants={subMenuAnimate}
+                      initial="hidden"
+                      animate="visible"
+                      className="w-[450px] h-[250px] bg-white rounded shadow-3xl absolute z-[210] left-[calc(450px / 1/4)] -bottom-[250px]"
+                    ></motion.div>
                   </NavigationMenu.Content>
                 </NavigationMenu.Item>
 
                 <NavigationMenu.Item className="px-6">
                   <NavigationMenu.NavigationMenuTrigger className="text-base text-[#242424] font-bold">
-                    <NavigationMenu.Link href="#">Blog</NavigationMenu.Link>
+                    <NavigationMenu.Link
+                      href="#"
+                      className="flex items-center gap-2 group"
+                    >
+                      Blog{" "}
+                      <ArrowUpRight className="opacity-0 group-hover:opacity-100" />
+                    </NavigationMenu.Link>
                   </NavigationMenu.NavigationMenuTrigger>
                 </NavigationMenu.Item>
 
                 <NavigationMenu.Item className="px-6">
                   <NavigationMenu.NavigationMenuTrigger className="text-base text-[#242424] font-bold">
-                    <NavigationMenu.Link href="#">
+                    <NavigationMenu.Link
+                      href="#"
+                      className="flex items-center gap-2 group"
+                    >
                       Tire suas dúvidas
+                      <ArrowUpRight className="opacity-0 group-hover:opacity-100" />
                     </NavigationMenu.Link>
                   </NavigationMenu.NavigationMenuTrigger>
                 </NavigationMenu.Item>
