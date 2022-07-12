@@ -28,3 +28,49 @@ body::backdrop {
 *::after {
   box-sizing: inherit;
 }
+
+.container-md {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-lg {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 959.95px) {
+  #first-product {
+    grid-area: 1 / 1 / 2 / 13;
+  }
+
+  #second-product {
+    grid-area: 2 / 1 / 3 / 9;
+  }
+
+  #third-product {
+    grid-area: 3 / 1 / 5 / 5;
+  }
+
+  #fourty-product {
+    grid-area: 3 / 5 / 5 / 9;
+  }
+
+  #fifty-product {
+    grid-area: 2 / 9 / 4 / 13;
+  }
+
+  #sixty-product {
+    grid-area: 4 / 9 / 6 / 13;
+  }
+
+  #seventy-product {
+    grid-area: 5 / 5 / 6 / 9;
+  }
+
+  #eighty-product {
+    grid-area: 5 / 1 / 6 / 5;
+  }
+}
