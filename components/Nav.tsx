@@ -1,12 +1,11 @@
-import { memo, useRef, useState } from "react";
+import { memo, useState } from "react";
 import { motion } from "framer-motion";
 import Logo from "./Logo";
 import Button from "./Button";
-import { List } from "phosphor-react";
+import { List, ArrowUpRight } from "phosphor-react";
 import useEventListener from "../hooks/useEventListener";
 
 const Nav = () => {
-  const navRef = useRef<HTMLElement>(null);
   const [scrollY, setScrollY] = useState(0);
   const [overlay, setOverlay] = useState(false);
   const [openDropdown, setOpenDropdown] = useState("");
@@ -36,7 +35,6 @@ const Nav = () => {
   return (
     <>
       <nav
-        ref={navRef}
         className={`fixed top-0 right-0 z-[200]  w-full h-[56px] md:h-[96px] transition-colors ${
           scrollY >= 100 && "bg-white"
         }`}
@@ -108,18 +106,20 @@ const Nav = () => {
                   ></motion.div>
                 </motion.li>
                 <li
-                  className="flex items-center justify-center h-full px-6 text-base font-semibold"
+                  className="flex items-center justify-center gap-1 h-full px-6 text-base font-semibold group"
                   onMouseEnter={() => setOverlay(true)}
                   onMouseLeave={() => setOverlay(false)}
                 >
                   <a href="#">Blog</a>
+                  <ArrowUpRight className="opacity-0 group-hover:opacity-100" />
                 </li>
                 <li
-                  className="flex items-center justify-center h-full px-6 text-base font-semibold"
+                  className="flex items-center justify-center gap-1 h-full px-6 text-base font-semibold group"
                   onMouseEnter={() => setOverlay(true)}
                   onMouseLeave={() => setOverlay(false)}
                 >
                   <a href="#">Tire suas Dúvidas</a>
+                  <ArrowUpRight className="opacity-0 group-hover:opacity-100" />
                 </li>
               </ul>
             </div>
