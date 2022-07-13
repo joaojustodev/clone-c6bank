@@ -1,5 +1,5 @@
-import { motion, Variants } from "framer-motion";
 import { useContext, useState } from "react";
+import { motion, Variants } from "framer-motion";
 import { MobileMenuContext } from "../context/MobileMenuContext";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";

@@ -1,12 +1,12 @@
 import { memo, useContext, useState } from "react";
-import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { motion, Variants } from "framer-motion";
+import * as NavigationMenu from "@radix-ui/react-navigation-menu";
+import { MobileMenuContext } from "../context/MobileMenuContext";
+import useEventListener from "../hooks/useEventListener";
 import Logo from "./Logo";
 import Button from "./Button";
 import ButtonOutline from "./ButtonOutline";
-import { MobileMenuContext } from "../context/MobileMenuContext";
 import { List, ArrowUpRight, X } from "phosphor-react";
-import useEventListener from "../hooks/useEventListener";
 
 const subMenuAnimate: Variants = {
   hidden: {

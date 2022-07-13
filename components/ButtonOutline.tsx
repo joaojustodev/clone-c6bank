@@ -1,4 +1,4 @@
-import { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
+import { AnchorHTMLAttributes, ReactNode } from "react";
 
 interface ButtonOutlineProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   children: ReactNode;
