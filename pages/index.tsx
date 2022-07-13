@@ -1,14 +1,14 @@
-import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import type { NextPage } from "next";
 import { motion, Variants } from "framer-motion";
 import Header from "../components/Home/Header";
 import Header959 from "../components/Home/Header959";
+import Nav from "../components/Nav";
 import MobileMenu from "../components/MobileMenu";
+import Products from "../components/Home/Products";
 import Footer from "../components/Footer";
 
-import Nav from "../components/Nav";
-import Products from "../components/Home/Products";
 import { ArrowUpRight } from "phosphor-react";
 
 const undelineHoverVariant: Variants = {
@@ -266,7 +266,7 @@ const Home: NextPage = () => {
                     </div>
                   </div>
 
-                  <div className="flex flex-col pt-4 px-4">
+                  <div className="flex flex-col pt-4 px-4 mb-4">
                     <span className="text-xs uppercase font-thin  before:inline-block before:content-[''] before:w-[1.5px] before:h-[7px] before:mr-3 before:bg-yellow-500">
                       Economia
                     </span>
@@ -307,7 +307,7 @@ const Home: NextPage = () => {
                     </div>
                   </div>
 
-                  <div className="flex flex-col pt-4 px-4">
+                  <div className="flex flex-col pt-4 px-4 mb-4">
                     <span className="text-xs uppercase font-thin  before:inline-block before:content-[''] before:w-[1.5px] before:h-[7px] before:mr-3 before:bg-yellow-500">
                       Produtos
                     </span>
