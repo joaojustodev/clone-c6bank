@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-🗣👥 Applicativo para buscar o clima de sua cidade.
+🗣👥 Clone do site do C6 Bank afins de práticas de programação.
 </p>
 
 ## 🎨 Telas
