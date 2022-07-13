@@ -3,18 +3,23 @@ import Button from "../Button";
 
 const Header959 = () => {
   return (
-    <header className="hidden relative overflow-hidden pb-16 pt-24 md:flex flex-col justify-end">
-      <div className="absolute top-0 left-0 right-0 bottom-0 -z-20">
-        <picture>
-          <Image
-            src="/static/hero-bg.webp"
-            alt="Mulher negra"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="top"
-            loading="lazy"
-          />
-        </picture>
+    <header className="hidden relative overflow-hidden md:flex flex-col items-end py-[200px]">
+      <div className="w-full">
+        <div className="absolute -z-20 top-0 right-0 bottom-0 left-0 ">
+          <div className="absolute top-0 left-0  w-full">
+            <div className="w-full pb-[50%]" />
+            <picture>
+              <Image
+                src="/static/hero-bg.webp"
+                alt="Mulher negra"
+                layout="fill"
+                objectFit="cover"
+                objectPosition="70% 0"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        </div>
       </div>
 
       <div className="flex flex-col gap-4 px-12 container-lg">

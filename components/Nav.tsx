@@ -40,11 +40,13 @@ const Nav = () => {
         <div className="max-w-containerLg h-full mx-auto">
           <div className="flex items-center justify-between h-full px-6">
             <div className="flex gap-6 h-full">
-              <Logo />
+              <div className="opacity-70 flex items-center mr-6">
+                <Logo />
+              </div>
               <NavigationMenu.Root className="h-full xl:flex items-center list-none hidden">
                 <NavigationMenu.Item className="pr-6">
                   <NavigationMenu.NavigationMenuTrigger className="text-base text-[#242424] font-bold">
-                    Pessoas Físicas
+                    Pessoas Física
                   </NavigationMenu.NavigationMenuTrigger>
                   <NavigationMenu.Content>
                     <motion.div
@@ -58,7 +60,7 @@ const Nav = () => {
 
                 <NavigationMenu.Item className="px-6">
                   <NavigationMenu.NavigationMenuTrigger className="text-base text-[#242424] font-bold">
-                    Pessoas Jurídicas
+                    Pessoas Jurídica
                   </NavigationMenu.NavigationMenuTrigger>
                   <NavigationMenu.Content>
                     <motion.div
