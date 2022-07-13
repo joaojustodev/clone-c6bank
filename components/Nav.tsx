@@ -3,9 +3,23 @@ import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { motion, Variants } from "framer-motion";
 import Logo from "./Logo";
 import Button from "./Button";
+import ButtonOutline from "./ButtonOutline";
 import { MobileMenuContext } from "../context/MobileMenuContext";
 import { List, ArrowUpRight, X } from "phosphor-react";
 import useEventListener from "../hooks/useEventListener";
+
+const subMenuAnimate: Variants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      type: "spring",
+      duration: 0.5,
+    },
+  },
+};
 
 const Nav = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -13,19 +27,6 @@ const Nav = () => {
   const { mobileMenuVisible, openMenuMobile, closeMenuMobile } =
     useContext(MobileMenuContext);
   useEventListener("scroll", () => setScrollY(window.scrollY));
-
-  const subMenuAnimate: Variants = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        type: "spring",
-        duration: 0.5,
-      },
-    },
-  };
 
   return (
     <>
@@ -120,14 +121,14 @@ const Nav = () => {
                   </span>
                 </Button>
               ) : (
-                <a
+                <ButtonOutline
                   href="#"
-                  className="flex items-center justify-center w-[142px] h-[28px] xl:w-[290px] xl:h-[42px] bg-transparent border border-gray-300 rounded-3xl uppercase  transition-colors hover:bg-gray-200"
+                  css="w-[142px] h-[28px] xl:w-[290px] xl:h-[42px]"
                 >
                   <span className="text-xs md:text-sm py-1 text-gray-500">
                     ABRA SUA CONTA
                   </span>
-                </a>
+                </ButtonOutline>
               )}
 
               {mobileMenuVisible ? (
