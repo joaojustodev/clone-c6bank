@@ -19,7 +19,7 @@
 ## 🧰 Ferramentas
 
 - [React](https://reactjs.org/)
-- [NextJS](hhttps://nextjs.org/)
+- [NextJS](https://nextjs.org/)
 - [TailwindCSS](https://tailwindcss.com/)
 - [Framer Motion](https://www.framer.com/motion/)
 - [Material UI](https://mui.com/pt/material-ui/)
