@@ -34,6 +34,10 @@ module.exports = {
         containerMd: "960px",
         containerLg: "1280px",
       },
+      spacing: {
+        sm: "16px",
+        lg: "24px",
+      },
     },
   },
   plugins: [],
