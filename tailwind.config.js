@@ -35,8 +35,8 @@ module.exports = {
         containerLg: "1280px",
       },
       spacing: {
-        sm: "16px",
-        lg: "24px",
+        sm: "1rem",
+        lg: "1.5rem",
       },
     },
   },

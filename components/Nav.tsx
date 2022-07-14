@@ -38,7 +38,7 @@ const Nav = () => {
         }`}
       >
         <div className="max-w-containerLg h-full mx-auto">
-          <div className="flex items-center justify-between h-full px-6">
+          <div className="flex items-center justify-between h-full px-lg">
             <div className="flex gap-6 h-full">
               <div className="opacity-70 flex items-center mr-6">
                 <Logo />
