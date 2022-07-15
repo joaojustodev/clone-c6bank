@@ -18,7 +18,7 @@
 
 - O projeto foi desenvolvido totalmente afins de estudo e prática, analisando o site da C6 Bank gostei muito da interface que foi apresentada, muitos detalhes, animações, conceitos bem avançados de grid layout e sem falar das otimizações de imagens para melhor experiência para usuário.
 
-- Analisando o site decidir iniciar projeto com NextJS, como site é composto por muitas imagens, é o framework ideal para construar essa interface.
+- Analisando o site decidi iniciar projeto com NextJS, como site é composto por muitas imagens, é o framework ideal para construir essa interface.
 
 - Como todos os projetos sempre começo o desenvolvimento da interface utilizando conceito Mobile First.
 
