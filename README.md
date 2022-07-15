@@ -22,7 +22,7 @@
 - [NextJS](https://nextjs.org/)
 - [TailwindCSS](https://tailwindcss.com/)
 - [Framer Motion](https://www.framer.com/motion/)
-- [Material UI](https://mui.com/pt/material-ui/)
+- [RadixUI](https://www.radix-ui.com/)
 
 ## 🙋‍♂️ Autor
 
