@@ -8,6 +8,9 @@ import Nav from "../components/Nav";
 import MobileMenu from "../components/MobileMenu";
 import Products from "../components/Home/Products";
 import Footer from "../components/Footer";
+import FirstBlogImg from "../public/static/1.webp";
+import SecondBlogImg from "../public/static/2.webp";
+import ThirdBlogImg from "../public/static/3.webp";
 
 import { ArrowUpRight } from "phosphor-react";
 
@@ -219,11 +222,13 @@ const Home: NextPage = () => {
                     <div className="relative overflow-hidden">
                       <div className="w-full pb-[49%]"></div>
                       <Image
-                        src="/static/1.webp"
+                        src={FirstBlogImg}
                         alt=""
                         layout="fill"
                         objectFit="cover"
                         objectPosition="center"
+                        placeholder="blur"
+                        quality={100}
                       />
                     </div>
                   </div>
@@ -257,11 +262,13 @@ const Home: NextPage = () => {
                     <div className="relative overflow-hidden">
                       <div className="w-full pb-[49%]"></div>
                       <Image
-                        src="/static/2.webp"
+                        src={SecondBlogImg}
                         alt=""
                         layout="fill"
                         objectFit="cover"
                         objectPosition="center"
+                        placeholder="blur"
+                        quality={100}
                       />
                     </div>
                   </div>
@@ -296,12 +303,14 @@ const Home: NextPage = () => {
                       <div className="w-full pb-[49%]"></div>
                       <picture>
                         <Image
-                          src="/static/3.webp"
+                          src={ThirdBlogImg}
                           alt=""
                           layout="fill"
                           objectFit="cover"
                           objectPosition="center"
                           className="w-full h-full"
+                          placeholder="blur"
+                          quality={100}
                         />
                       </picture>
                     </div>
