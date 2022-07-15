@@ -2,7 +2,7 @@ import ProductsForYou from "./ProductsForYou";
 
 const Products = () => {
   return (
-    <section className="py-12 md:py-20 md:px-12">
+    <section>
       <div className="max-w-containerMd mx-auto ">
         <div className="flex flex-col gap-12 px-4 mb-12">
           <h2 className="text-3xl leading-snug md:text-[40px] max-w-[633px]">

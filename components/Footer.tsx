@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Button from "./Button";
+import CartonCarbonImg from "../public/static/cartao-carbon-black.webp";
+import PhoneAppImg from "../public/static/phone-app.webp";
 
 const Footer = () => {
   return (
@@ -27,11 +29,13 @@ const Footer = () => {
               <div className="w-full pb-[60%]" />
               <picture>
                 <Image
-                  src="/static/cartao-carbon-black.webp"
+                  src={CartonCarbonImg}
                   alt=""
                   layout="fill"
                   objectFit="cover"
                   objectPosition="center"
+                  placeholder="blur"
+                  quality={100}
                   className="z-10 absolute top-0"
                 />
               </picture>
@@ -41,11 +45,13 @@ const Footer = () => {
               <div className="pb-[80%]" />
               <picture>
                 <Image
-                  src="/static/phone-app.webp"
+                  src={PhoneAppImg}
                   alt=""
                   layout="fill"
                   objectFit="cover"
                   objectPosition="center"
+                  placeholder="blur"
+                  quality={100}
                   className="z-[5]"
                 />
               </picture>

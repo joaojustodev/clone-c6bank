@@ -1,21 +1,23 @@
 import Image from "next/image";
 import Button from "../Button";
+import HeroImg from "../../public/static/hero-bg.webp";
 
 const Header959 = () => {
   return (
-    <header className="hidden relative overflow-hidden md:flex flex-col items-end py-[200px]">
+    <header className="hidden relative overflow-hidden md:flex flex-col items-end xl:py-[200px] py-[150px]">
       <div className="w-full">
         <div className="absolute -z-20 top-0 right-0 bottom-0 left-0 ">
           <div className="absolute top-0 left-0  w-full">
             <div className="w-full pb-[50%]" />
             <picture>
               <Image
-                src="/static/hero-bg.webp"
+                src={HeroImg}
                 alt="Mulher negra"
                 layout="fill"
                 objectFit="cover"
                 objectPosition="70% 0"
-                loading="lazy"
+                quality={100}
+                placeholder="blur"
               />
             </picture>
           </div>

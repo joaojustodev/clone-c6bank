@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Button from "../Button";
+import HeroXsImg from "../../public/static/hero-bg-xs.webp";
 
 const Header = () => {
   return (
@@ -10,11 +11,12 @@ const Header = () => {
             <div className="w-full pb-[75%]"></div>
             <picture>
               <Image
-                src="/static/hero-bg-xs.webp"
+                src={HeroXsImg}
                 alt="Mulher negra"
                 layout="fill"
                 objectFit="cover"
-                loading="lazy"
+                placeholder="blur"
+                quality={100}
                 className="absolute left-0 top-0"
               />
             </picture>
