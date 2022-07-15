@@ -1,7 +1,7 @@
 import { memo, useContext, useState } from "react";
 import { motion, Variants } from "framer-motion";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import { MobileMenuContext } from "../context/MobileMenuContext";
+import { MobileMenuContext } from "../contexts/MobileMenuContext";
 import useEventListener from "../hooks/useEventListener";
 import Logo from "./Logo";
 import Button from "./Button";
@@ -39,8 +39,8 @@ const Nav = () => {
       >
         <div className="max-w-containerLg h-full mx-auto">
           <div className="flex items-center justify-between h-full px-lg">
-            <div className="flex gap-6 h-full">
-              <div className="opacity-70 flex items-center mr-6">
+            <div className="flex gap-lg h-full">
+              <div className="opacity-70 flex items-center mr-lg">
                 <Logo />
               </div>
               <NavigationMenu.Root className="h-full xl:flex items-center list-none hidden">
