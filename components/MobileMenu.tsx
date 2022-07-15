@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { motion, Variants } from "framer-motion";
-import { MobileMenuContext } from "../context/MobileMenuContext";
+import { MobileMenuContext } from "../contexts/MobileMenuContext";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -35,7 +35,7 @@ const MobileMenu = () => {
       variants={MobileMenuAnimate}
       initial="hidden"
       animate={mobileMenuVisible ? "visible" : "hidden"}
-      className="xl:hidden fixed top-0 right-0 z-[190] left-0 bottom-0 h-screen bg-white"
+      className="xl:hidden fixed overflow-auto top-0 right-0 z-[190] left-0 bottom-0 h-screen bg-white"
     >
       <div className="pt-[60px]"></div>
       <nav className="px-6 py-8">
