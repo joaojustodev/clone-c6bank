@@ -4,10 +4,10 @@ import HeroImg from "../../public/static/hero-bg.webp";
 
 const Header959 = () => {
   return (
-    <header className="hidden relative overflow-hidden md:flex flex-col items-end xl:py-[200px] py-[150px]">
-      <div className="w-full">
+    <header className="hidden relative pt-24 pb-16 overflow-hidden md:flex flex-col justify-end h-full min-h-screen">
+      <div className="w-full h-full">
         <div className="absolute -z-20 top-0 right-0 bottom-0 left-0 ">
-          <div className="absolute top-0 left-0  w-full">
+          <div className="absolute top-0 left-0 w-full h-full">
             <div className="w-full pb-[50%]" />
             <picture>
               <Image
@@ -24,8 +24,8 @@ const Header959 = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-4 px-12 container-lg">
-        <div className="bg-gray-100 w-[436px] rounded-3xl">
+      <div className="flex flex-col gap-4 px-12 w-full max-w-containerLg mx-auto">
+        <div className="bg-gray-100 w-full max-w-[436px] rounded-3xl">
           <a href="#" className="flex  gap-2 py-2 pl-3 pr-6">
             <div className="flex items-center gap-2">
               <span className="block text-xs text-white font-bold  bg-blue-500 rounded-3xl px-2 py-1">
