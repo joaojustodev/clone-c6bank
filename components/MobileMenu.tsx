@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import * as Accordion from "@radix-ui/react-accordion";
 import { motion, Variants } from "framer-motion";
 import { MobileMenuContext } from "../contexts/MobileMenuContext";

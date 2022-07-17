@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Button from "../Button";
+import Button from "../UI/Button";
 import HeroImg from "../../public/static/hero-bg.webp";
 
 const Header959 = () => {

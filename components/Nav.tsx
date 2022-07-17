@@ -3,9 +3,9 @@ import { motion, Variants } from "framer-motion";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { MobileMenuContext } from "../contexts/MobileMenuContext";
 import useEventListener from "../hooks/useEventListener";
-import Logo from "./Logo";
-import Button from "./Button";
-import ButtonOutline from "./ButtonOutline";
+import Logo from "./UI/Logo";
+import Button from "./UI/Button";
+import ButtonOutline from "./UI/ButtonOutline";
 import { List, ArrowUpRight, X } from "phosphor-react";
 
 const subMenuAnimate: Variants = {
@@ -24,17 +24,18 @@ const subMenuAnimate: Variants = {
 const Nav = () => {
   const [scrollY, setScrollY] = useState(0);
   const [overlay, setOverlay] = useState(false);
+
   const { mobileMenuVisible, openMenuMobile, closeMenuMobile } =
     useContext(MobileMenuContext);
   useEventListener("scroll", () => setScrollY(window.scrollY));
 
   return (
     <>
-      <nav
+      <motion.nav
         onMouseEnter={() => setOverlay(true)}
         onMouseLeave={() => setOverlay(false)}
         className={`fixed top-0 right-0 z-[200]  w-full h-[56px] md:h-[96px] transition-colors ${
-          scrollY >= 100 || overlay ? "bg-white" : ""
+          scrollY > 100 || overlay ? "bg-white" : ""
         }`}
       >
         <div className="max-w-containerLg h-full mx-auto">
@@ -113,7 +114,7 @@ const Nav = () => {
             </div>
 
             <div className="flex items-center justify-center gap-4">
-              {scrollY >= 100 || overlay ? (
+              {scrollY > 100 || overlay ? (
                 <Button
                   href="#"
                   css="w-[142px] h-[28px] xl:w-[290px] xl:h-[42px]"
@@ -155,7 +156,7 @@ const Nav = () => {
             </div>
           </div>
         </div>
-      </nav>
+      </motion.nav>
 
       <div
         className={`${

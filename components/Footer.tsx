@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Button from "./Button";
+import Button from "./UI/Button";
 import CartonCarbonImg from "../public/static/cartao-carbon-black.webp";
 import PhoneAppImg from "../public/static/phone-app.webp";
 
