@@ -1,9 +1,9 @@
 import {
   createContext,
   FC,
-  useEffect,
   useState,
   PropsWithChildren,
+  useCallback,
 } from "react";
 
 interface MobileMenuContextProps {
@@ -19,20 +19,22 @@ export const MobileMenuContextProvider: FC<PropsWithChildren> = ({
 }) => {
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
 
+  const removeScrollBody = useCallback((value: boolean) => {
+    const body = document.querySelector("body");
+    if (value && body) body.style.overflow = "hidden";
+
+    if (!value && body) body.style.overflow = "auto";
+  }, []);
+
   function openMenuMobile() {
     setMobileMenuVisible(true);
+    removeScrollBody(true);
   }
 
   function closeMenuMobile() {
     setMobileMenuVisible(false);
+    removeScrollBody(false);
   }
-
-  useEffect(() => {
-    const body = document.querySelector("body");
-    if (mobileMenuVisible && body) body.style.overflow = "hidden";
-
-    if (!mobileMenuVisible && body) body.style.overflow = "auto";
-  }, [mobileMenuVisible]);
 
   return (
     <MobileMenuContext.Provider
