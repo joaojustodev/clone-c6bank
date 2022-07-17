@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require("tailwindcss/plugin");
+
 module.exports = {
   content: ["./pages/*.tsx", "./components/**/*.tsx"],
   theme: {
@@ -40,5 +42,11 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addVariant }) {
+      addVariant("data-state-open", "&[data-state='open']");
+      addVariant("data-state-active", "&[data-state='active']");
+      addVariant("data-state-opened", "[data-state='open'] &");
+    }),
+  ],
 };
