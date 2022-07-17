@@ -48,9 +48,7 @@ const imageScaleVariant: Variants = {
   hover: {
     scale: 1.1,
     transition: {
-      type: "spring",
-      bounce: 0,
-      duration: 0.2,
+      default: { duration: 0.2 },
     },
   },
 };
